@@ -1,0 +1,20 @@
+package cn.practice2;
+
+public abstract class AbstractClass {
+   //抽象方法
+    public abstract void connection();
+
+    public  int square(int i){
+        return i*i;
+    }
+
+ //   public int sum(int a, int b){
+ //       this.a = a;
+ //       this.b = b;
+ //       return a+b;
+ //   }
+
+ //   public static void main(String[] args) {
+
+ //   }
+}
