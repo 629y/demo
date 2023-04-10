@@ -1,6 +1,6 @@
 package cn.practice;
 
-public class DecimalFormat {
+public class DecimalFormat1 {
     public static void main(String[] args) {
         //DecimalFormat();
         //使用默认语言环境的默认模式和符号创建对象。其中隐含设置了三个数一组，若调

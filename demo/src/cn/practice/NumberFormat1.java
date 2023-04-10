@@ -1,6 +1,9 @@
 package cn.practice;
 
-public class NumberFormat {
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class NumberFormat1 {
     public static void main(String[] args) {
 //        int a = 1424248;
 //        float b = .5F;
@@ -30,6 +33,10 @@ public class NumberFormat {
 //        System.out.println("百分比为：" + res1 + "%");
     }
 
+    public static NumberFormat getPercentInstance(Locale china) {
+        return null;
+    }
+
     private void setMaximumFractionDigits(int i) {
     }
 
@@ -37,14 +44,18 @@ public class NumberFormat {
         return null;
     }
 
-    private String format(int a) {
+    String format(int a) {
         return null;
     }
 
     private void setMinimumFractionDigits() {
     }
 
-    private static NumberFormat getCurrencyInstance() {
+    static NumberFormat getCurrencyInstance(Locale china) {
+        return null;
+    }
+
+    public Number parse(String str) {
         return null;
     }
 }
