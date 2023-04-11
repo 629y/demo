@@ -1,5 +1,7 @@
 package cn.practice;
 
+import cn.process.WechatTimeEffect;
+
 public class TestWechat {
     public static void main(String[] args) {
         long t = System.currentTimeMillis() - 1000*60*60*24*60;
