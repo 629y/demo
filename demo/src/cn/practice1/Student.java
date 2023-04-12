@@ -1,5 +1,14 @@
 package cn.practice1;
-
+/**
+ * <p>Description:Arrays.sort(stus); </p>
+ * <p>Class:Student</p>
+ * <p> alt + insert 快速编写代码,快速插入代码 getter setter 构造器 toString()</p>
+ * <p>Powered by zxy On 2023-04-12 21:45  </p>
+ *
+ * @author zxy [zxy06291@163.com]
+ * @version 1.0
+ * @since 17
+ */
 public class Student implements Comparable<Student>{
     private int id;
     private String name;
@@ -51,7 +60,7 @@ public class Student implements Comparable<Student>{
         this.address = address;
     }
 
-
+    //@Override
     public int compareTo(Student o) {
         //return id - o.id;
         return address.compareTo(o.address);

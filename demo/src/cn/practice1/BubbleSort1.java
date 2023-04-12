@@ -2,7 +2,15 @@ package cn.practice1;
 
 import java.util.Arrays;
 import java.util.Random;
-
+/**
+ * <p>Description:掌握一维数组，二维数组声明，遍历，使用</p>
+ * <p>Class:BubbleSort1</p>
+ * <p>Powered by zxy On 2023-04-12 21:13  </p>
+ *
+ * @author zxy [zxy06291@163.com]
+ * @version 1.0
+ * @since 17
+ */
 public class BubbleSort1 {
     public static void main(String[] args) {
         //数字排序

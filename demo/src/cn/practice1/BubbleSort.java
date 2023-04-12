@@ -2,10 +2,19 @@ package cn.practice1;
 
 import java.util.Arrays;
 import java.util.Random;
-
+/**
+ * <p>Description:利用数组实现冒泡排序效果</p>
+ * <p>//声明10个元素的int数组，并赋值10个数(1-100)随机数，直接遍历输出，排序后，在输出</p>
+ * <p>Class:BubbleSort</p>
+ * <p>Powered by zxy On 2023-04-12 21:06  </p>
+ *
+ * @author zxy [zxy06291@163.com]
+ * @version 1.0
+ * @since 17
+ */
 public class BubbleSort {
     public static void main(String[] args) {
-        //声明声明10个元素的int数组，并赋值10个数(1-100)随机数，直接遍历输出，排序后，在输出
+        //声明10个元素的int数组，并赋值10个数(1-100)随机数，直接遍历输出，排序后，在输出
         Random rand=new Random();
         int[] num=new int[10];
         for (int i = 0; i < num.length; i++) {
@@ -14,7 +23,7 @@ public class BubbleSort {
         System.out.println(Arrays.toString(num));
 
         //排序 升序
-        //Arrays.sort(num);
+        Arrays.sort(num);
         //排序后输出
         System.out.println(Arrays.toString(num));
 

@@ -1,7 +1,15 @@
 package cn.practice1;
 
 import java.util.Arrays;
-
+/**
+ * <p>Description:对象数组排序</p>
+ * <p>Class:Student1</p>
+ * <p>Powered by zxy On 2023-04-12 21:47  </p>
+ *
+ * @author zxy [zxy06291@163.com]
+ * @version 1.0
+ * @since 17
+ */
 public class Student1 {
     public static void main(String[] args) {
         Student stu = new Student();
@@ -22,7 +30,11 @@ public class Student1 {
         };
         System.out.println(Arrays.toString(stus));
 
-        //根据对象的成功降序
+        //按照升序排序
+        //看Student implements Comparable<Student>
+        //interface Comparable<T>中有public int compareTo(T o)
+        // compareTo中return address.compareTo(o.address)
+        //所以按照的是address进行的升序排序
         Arrays.sort(stus);
         System.out.println(Arrays.toString(stus));
     }
