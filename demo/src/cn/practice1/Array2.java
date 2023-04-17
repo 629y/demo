@@ -1,6 +1,7 @@
 package cn.practice1;
 
 import java.util.Arrays;
+
 /**
  * <p>Description:遍历数组</p>
  * <p>Class:Array2</p>
@@ -21,7 +22,7 @@ public class Array2 {
         System.out.println(ss[4]);//mysql
 
         int index = 0;
-        for (String s:ss){
+        for (String s : ss) {
             System.out.println(ss[index++]);
             //java
             //html
@@ -31,8 +32,8 @@ public class Array2 {
             //vue
             //python
         }
-        for (int i = 0;i<ss.length;i++){
-            System.out.printf("ss[%d] = %s%n",i,ss[i]);
+        for (int i = 0; i < ss.length; i++) {
+            System.out.printf("ss[%d] = %s%n", i, ss[i]);
             //ss[0] = java
             //ss[1] = html
             //ss[2] = css
@@ -41,8 +42,8 @@ public class Array2 {
             //ss[5] = vue
             //ss[6] = python
         }
-        for (int i = ss.length - 1;i>=0;i--){
-            System.out.printf("ss[%d] = %s%n",i,ss[i]);
+        for (int i = ss.length - 1; i >= 0; i--) {
+            System.out.printf("ss[%d] = %s%n", i, ss[i]);
             //ss[6] = python
             //ss[5] = vue
             //ss[4] = mysql

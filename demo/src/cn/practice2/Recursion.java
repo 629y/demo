@@ -1,5 +1,18 @@
-package cn.practice1;
+/*
+ * Copyright (c) 2017, 2023, zxy.cn All rights reserved.
+ *
+ */
+package cn.practice2;
 
+/**
+ * <p>Description:递归方法-在方法内部，再次调用本方法，此方法就是递归方法</p>
+ * <p>Class:Recursion</p>
+ * <p>Powered by zxy On 2023/4/18 0:34 </p>
+ *
+ * @author zxy [zxy06291@163.com]
+ * @version 1.0
+ * @since 17
+ */
 public class Recursion {
     static void m1(int i) {
         if (i >= 0) {
