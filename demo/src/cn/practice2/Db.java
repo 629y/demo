@@ -1,4 +1,18 @@
+/*
+ * Copyright (c) 2017, 2023, zxy.cn All rights reserved.
+ *
+ */
 package cn.practice2;
+
+/**
+ * <p>Description:定义接口</p>
+ *
+ * <p>Powered by zxy On 2023/5/16 17:41 </p>
+ *
+ * @author zxy [zxy06291@163.com]
+ * @version 1.0
+ * @since 17
+ */
 
 public interface Db {
     String version = "1.0";

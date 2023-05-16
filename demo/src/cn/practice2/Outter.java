@@ -1,5 +1,18 @@
+/*
+ * Copyright (c) 2017, 2023, zxy.cn All rights reserved.
+ *
+ */
 package cn.practice2;
 
+/**
+ * <p>Description:内部类</p>
+ * <p>Class:</p>
+ * <p>Powered by zxy On 2023/5/16 19:50 </p>
+ *
+ * @author zxy [zxy06291@163.com]
+ * @version 1.0
+ * @since 17
+ */
 public class Outter {
     //成员 public 静态的内部类
     public static class out{
