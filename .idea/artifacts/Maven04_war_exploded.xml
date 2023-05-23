@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Maven04:war exploded">
+    <output-path>$PROJECT_DIR$/Maven04/target/Maven04-1.0</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>Maven04</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Maven04" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.baomidou:mybatis-plus:3.5.3.1" />
+          <element id="library" level="project" name="Maven: com.baomidou:mybatis-plus-extension:3.5.3.1" />
+          <element id="library" level="project" name="Maven: com.baomidou:mybatis-plus-core:3.5.3.1" />
+          <element id="library" level="project" name="Maven: com.baomidou:mybatis-plus-annotation:3.5.3.1" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:4.4" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:2.0.7" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.12" />
+          <element id="archive" name="wx-utils-1.0.jar">
+            <element id="module-output" name="wx-utils" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Maven04/target/Maven04-1.0/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Maven04/web/Web" />
+    </root>
+  </artifact>
+</component>
