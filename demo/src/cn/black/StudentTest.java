@@ -68,7 +68,13 @@ public class StudentTest {
             Student stu = arr[i];
             //获取数组中学生对象的id
             int sid = stu.getId();
+            //比较
+            if(sid == id){
+                return true;
+            }
         }
+        //当循环结束之后，还没有找到一样的，那么就表示数组中要查找的id 是不存在的
         return false;
+
     }
 }
