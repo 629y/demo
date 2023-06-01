@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body{
+      background: #333;
+    }
+    .map{
+      position: relative;
+      width: 750px;
+      height: 620px;
+      background: url(../media/map.png) no-repeat;
+      margin: 0 auto;
+    }
+    .city{
+      position: absolute;
+      top: 230px;
+      right: 200px;
+    }
+    .tb{
+      /*position: absolute;*/
+      top: 500px;
+      right: 85px;
+    }
+    .dotted{
+      width: 8px;
+      height: 8px;
+      background-color: #09f;
+      border-radius: 50%;
+    }
+    /*使用属性选择器 选择pulse开头的属性*/
+    .city div[class^="pulse"]{
+    /*.pulse1,.pulse2,.pulse3{*/
+      /*保证我们的小波纹在父盒子里面水平居中，放大之后从中心向四周扩散*/
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 7px;
+      height: 7px;
+      box-shadow: 0 0 10px #009dfd;   /*向 div 元素添加阴影：*/
+      border-radius: 50%;
+      animation: pulse 1.2s linear infinite;
+    }
+    .city div.pulse2{
+      animation-delay: .4s;
+    }
+    .city div.pulse3{
+      animation-delay: .8s;
+    }
+    @keyframes pulse{
+      0%{}
+      70%{
+        width: 40px;
+        height: 40px;
+        opacity: 1;  /*透明度*/
+      }
+      100%{
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="map">
+  <div class="city">
+    <div class="dotted"></div>
+    <div class="pulse1"></div>
+    <div class="pulse2"></div>
+    <div class="pulse3"></div>
+  </div>
+  <div class="city tb">
+    <div class="dotted"></div>
+    <div class="pulse1"></div>
+    <div class="pulse2"></div>
+    <div class="pulse3"></div>
+  </div>
+</div>
+</body>
+</html>

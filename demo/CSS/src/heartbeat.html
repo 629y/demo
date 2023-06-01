@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>heartbeat</title>
+    <style>
+        body{
+            background: pink;
+        }
+        .all{
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 120px auto;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            border-radius: 65%;
+            left: 30px;
+        }
+        .right{
+            width: 200px;
+            height: 200px;
+            border-radius: 65%;
+            right: 30px;
+        }
+        .bottom{
+            width: 200px;
+            height: 200px;
+            border-radius: 10%;
+            transform: rotate(45deg);
+            bottom: 30px;
+            left: 100px;
+        }
+        .left,.right,.bottom{
+            position: absolute;
+            box-shadow: 0 0 40px red;
+            background: red;
+            /*background: linear-gradient(-90deg,red 0%,red 100%);*/
+            /*为三个子元素的背景做一个渐变的效果 ，-90deg为变轴 从开始浅色逐渐加深*/
+            animation: beat 1s ease infinite;
+        }
+        .texts{
+            text-align: center;
+            font-size: 30px;
+        }
+        @keyframes beat {
+            0%{
+                transform:scale(1) rotate(315deg);
+            }
+            50%{
+                transform:scale(1.3) rotate(315deg);
+            }
+            100%{
+                transform:scale(1) rotate(315deg);
+            }
+            /* scale 表示对这个标签缩放
+               rotate 盒子的旋转 旋转的度数 45° 135° 225° 315° 都是一样的心尖尖 */
+
+        }
+    </style>
+</head>
+<body>
+<div class="all">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+</div>
+<div class="texts">
+    6.1儿童节快乐，我们还在成长的路上，喜欢糖果和气球
+</div>
+</body>
+</html>
