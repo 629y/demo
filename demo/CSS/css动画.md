@@ -198,7 +198,7 @@ keyframes：规则内指定一个 CSS 样式和动画将逐步从目前的样式
 </body>
 ```
 
-**奔跑的大熊：**
+**奔跑的大熊：**`CSS/src/bear.html`
 
 ```html
 <!DOCTYPE html>
@@ -248,4 +248,476 @@ keyframes：规则内指定一个 CSS 样式和动画将逐步从目前的样式
 </body>
 </html>
 ```
+
+**热点地图：**`CSS/src/maplighting.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body{
+      background: #333;
+    }
+    .map{
+      position: relative;
+      width: 750px;
+      height: 620px;
+      background: url(../media/map.png) no-repeat;
+      margin: 0 auto;
+    }
+    .city{
+      position: absolute;
+      top: 230px;
+      right: 200px;
+    }
+    .tb{
+      /*position: absolute;*/
+      top: 500px;
+      right: 85px;
+    }
+    .dotted{
+      width: 8px;
+      height: 8px;
+      background-color: #09f;
+      border-radius: 50%;
+    }
+    /*使用属性选择器 选择pulse开头的属性*/
+    .city div[class^="pulse"]{
+    /*.pulse1,.pulse2,.pulse3{*/
+      /*保证我们的小波纹在父盒子里面水平居中，放大之后从中心向四周扩散*/
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 7px;
+      height: 7px;
+      box-shadow: 0 0 10px #009dfd;   /*向 div 元素添加阴影：*/
+      border-radius: 50%;
+      animation: pulse 1.2s linear infinite;
+    }
+    .city div.pulse2{
+      animation-delay: .4s;
+    }
+    .city div.pulse3{
+      animation-delay: .8s;
+    }
+    @keyframes pulse{
+      0%{}
+      70%{
+        width: 40px;
+        height: 40px;
+        opacity: 1;  /*透明度*/
+      }
+      100%{
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="map">
+  <div class="city">
+    <div class="dotted"></div>
+    <div class="pulse1"></div>
+    <div class="pulse2"></div>
+    <div class="pulse3"></div>
+  </div>
+  <div class="city tb">
+    <div class="dotted"></div>
+    <div class="pulse1"></div>
+    <div class="pulse2"></div>
+    <div class="pulse3"></div>
+  </div>
+</div>
+</body>
+</html>
+```
+
+**跳动的心：**`CSS/src/heartbeat.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>heartbeat</title>
+    <style>
+        body{
+            background: pink;
+        }
+        .all{
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 120px auto;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            border-radius: 65%;
+            left: 30px;
+        }
+        .right{
+            width: 200px;
+            height: 200px;
+            border-radius: 65%;
+            right: 30px;
+        }
+        .bottom{
+            width: 200px;
+            height: 200px;
+            border-radius: 10%;
+            transform: rotate(45deg);
+            bottom: 30px;
+            left: 100px;
+        }
+        .left,.right,.bottom{
+            position: absolute;
+            box-shadow: 0 0 40px red;
+            background: red;
+            /*background: linear-gradient(-90deg,red 0%,red 100%);*/
+            /*为三个子元素的背景做一个渐变的效果 ，-90deg为变轴 从开始浅色逐渐加深*/
+            animation: beat 1s ease infinite;
+        }
+        .texts{
+            text-align: center;
+            font-size: 30px;
+        }
+        @keyframes beat {
+            0%{
+                transform:scale(1) rotate(315deg);
+            }
+            50%{
+                transform:scale(1.3) rotate(315deg);
+            }
+            100%{
+                transform:scale(1) rotate(315deg);
+            }
+            /* scale 表示对这个标签缩放
+               rotate 盒子的旋转 旋转的度数 45° 135° 225° 315° 都是一样的心尖尖 */
+
+        }
+    </style>
+</head>
+<body>
+<div class="all">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+</div>
+<div class="texts">
+    6.1儿童节快乐，我们还在成长的路上，喜欢糖果和气球
+</div>
+</body>
+</html><style>
+    body{
+        background-color: pink;
+    }
+    .all{
+        width: 400px;
+        height: 300px;
+        position: relative;  /*all 父元素*/
+        top: 100px;           /*图像上下左右位置调整*/
+        left: 40%;
+    }
+    .left{
+        left: 30px;
+        width: 200px;
+        height: 200px;
+        border-radius: 65%; /*调整左边盒子的弧度*/
+    }
+.right{
+    right:30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 65%;
+}
+.bottom{
+    bottom:30px;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    transform: rotate(45deg); /*将下面的盒子旋转45度*/
+}
+.left , .right , .bottom{
+    /*设置绝对路径*/
+    position: absolute;
+    /*设置盒子的阴影*/
+    box-shadow: 0 0 40px orangered;
+    animation: myanimation 1.5s ease infinite;
+    background: linear-gradient(-90deg,orangered 0%,orangered 100%) ;
+    /*为三个子元素的背景做一个渐变的效果 ，-90deg为变轴 从开始浅色逐渐加深*/
+}
+.texts{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 30%;
+    margin-top: 150px;
+}
+@keyframes myanimation{
+
+    0%{
+        transform: scale(1) rotate(225deg);
+    }
+    50%{
+        transform: scale(1.2) rotate(225deg);
+    }
+    100%{
+        transform: scale(1) rotate(225deg);
+    }
+    /*
+        scale 表示对这个标签缩放
+        rotate 盒子的旋转 旋转的度数
+    */
+}
+</style>
+</head>
+<body>
+    <div class="all">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+
+    </div>
+    <div class="texts">
+        6.1儿童节快乐，我们还在成长的路上，喜欢糖果和气球
+
+    </div>
+
+```
+
+## 3D旋转rotatex
+
+3D旋转指的是：让元素在三维平面内沿着X Y Z轴或者自定义进行旋转
+
+### 语法：
+
+- transform：rotateX(45deg） --- 沿着X轴正方向旋转45度
+
+- transform：rotateY(45deg)   ---沿着y轴正方向旋转45度
+- transform：rotateZ(45deg)  --- 沿着Z轴正方向旋转45度
+- transform：rotate3d(x,y,z,45deg)  ---沿着自定义轴旋转45度
+
+**案例驱动**`CSS/src/rotate.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rotate</title>
+  <style>
+    div{
+      /* 定义3D元素视图的距离  子元素获得透视效果 不是元素的本身*/
+      perspective: 400px;
+    }
+    img{
+      display: block;
+      margin: 120px auto;
+      transition: all 1s;
+    }
+    img:hover{
+      /*沿着x轴旋转45度*/
+      transform: rotateX(-45deg);
+      /*transform: rotateY(180deg);*/
+      /* transform: rotateZ(45deg); */
+      /* transform: rotate3d(1,1,0,180deg);  沿着对角线旋转 180deg */
+      /* transform: rotate3d(1,0,0,180deg);  沿着X轴线旋转 180deg
+      transform: rotate3d(0,1,0,180deg); 沿着Y轴线旋转 180deg */
+    }
+  </style>
+</head>
+<body>
+<div>
+  <img src="../media/pig.jpg">
+</div>
+</body>
+</html>
+```
+
+**翻转导航栏：**`CSS/src/navigation.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            margin: 100px;
+        }
+        ul li{
+            float: left;
+            margin: 0 7px;
+            width: 120px;
+            height: 35px;
+            list-style: none;
+            perspective: 200px;
+        }
+        .box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;  /*保留3D的位置 */
+            transition: all .4s;
+        }
+        .box:hover{
+            transform: rotateX(90deg);
+        }
+        .front, .bottom{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .front{
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(15px);
+        }
+        .bottom{
+            background-color: darkkhaki;
+            /*后面的需要沿着X轴进行显示 X轴必须是负数 如果有移动的样式 必须是先移动后旋转*/
+            transform: translateY(15px) rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <div class="box">
+            <div class="front">后院小树林</div>
+            <div class="bottom">我在这等你</div>
+        </div>
+    </li>
+    <li>
+        <div class="box">
+            <div class="front">后院小树林</div>
+            <div class="bottom">我在这等你</div>
+        </div>
+    </li>
+    <li>
+        <div class="box">
+            <div class="front">后院小树林</div>
+            <div class="bottom">我在这等你</div>
+        </div>
+    </li>
+    <li>
+        <div class="box">
+            <div class="front">后院小树林</div>
+            <div class="bottom">我在这等你</div>
+        </div>
+    </li>
+</ul>
+</body>
+</html>
+```
+
+**旋转木马：**`CSS/src/carousel.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转木马</title>
+  <style>
+    body{
+      perspective: 1000px;
+    }
+    section{
+      position: relative;
+      width: 300px;
+      height: 200px;
+      margin: 150px auto;
+      background: url("../media/pig.jpg") no-repeat;
+      animation: rotate 5s linear infinite;
+      transform-style: preserve-3d;
+    }
+    section:hover{
+      animation-play-state: paused;
+    }
+    @keyframes rotate {
+      0%{
+        transform: rotateX(0);
+      }
+      100%{
+        transform: rotateY(360deg);
+      }
+    }
+    section div{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("../media/dog.jpg") no-repeat;
+    }
+    section div:nth-child(1) {
+      transform: rotateY(0) translateZ(300px);
+    }
+    section div:nth-child(2){
+      transform: rotateY(60deg) translateZ(300px);
+    }
+    section div:nth-child(3){
+      transform: rotateY(120deg) translateZ(300px);
+    }
+    section div:nth-child(4){
+      transform: rotateY(180deg) translateZ(300px);
+    }
+    section div:nth-child(5){
+      transform: rotateY(240deg) translateZ(300px);
+    }
+    section div:nth-child(6){
+      transform: rotateY(300deg) translateZ(300px);
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</body>
+</html>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
