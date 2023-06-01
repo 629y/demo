@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bear</title>
+  <style>
+    body{
+        background: aliceblue;
+        background: url("../media/bg1.png") no-repeat;
+        background-size: 1600px;
+    }
+    div{
+        background: url("../media/bear.png") no-repeat;
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        animation: bear .4s steps(8) infinite alternate,move 3s infinite alternate;
+        /*animation-name: bear;*/
+        /*animation-delay: .4s;*/
+        /*animation-iteration-count: infinite;*/
+        /*animation-timing-function: steps(8);*/
+        /*animation-direction: alternate;*/
+    }
+    @keyframes bear {
+        0%{
+            background-position: 0 0;
+        }
+        100%{
+            background-position: -1600px 0;
+        }
+    }
+    @keyframes move{
+        0%{
+            left: 0;
+        }
+        100%{
+            left: 94%;
+            transform: translateX(-50%);
+        }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
