@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        /*弹性盒子:元素的总高度和宽度包含内边距和边框(padding 与 border) */
+        }
+        body{
+            /*margin-top: 100px;*/
+            height: 100vh;
+
+            display: flex; /*设置显示*/
+            justify-content: center;/* 居中排列 */
+            /*在弹性盒对象的 <div> 元素中的各项周围留有空白：*/
+            align-items: center;
+            /*元素位于容器的中心*/
+            background: radial-gradient(circle,white,black);
+        }
+        .photo{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: rotate 6s linear alternate infinite;
+        }
+        .photo div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .8;
+        }
+        .photo img{
+            width: 100%;
+            height: 100%;
+        }
+        .q1{
+            transform: translateZ(150px);
+        }
+        .h2{
+            transform: rotateY(180deg) translateZ(150px);
+        }
+        .z3{
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        .y4{
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .s5{
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .x6{
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        @keyframes rotate {
+            0%,5%{
+                transform: rotateY(90deg);
+            }
+            20%,25%{
+                transform: rotateY(180deg);
+            }
+            40%,45%{
+                transform: rotateY(270deg);
+            }
+            60%,65%{
+                transform: rotateX(-90deg);
+            }
+            80%,85%{
+                transform: rotateX(0deg);
+            }
+            95%,100%{
+                transform: rotateX(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="photo">
+    <div class="q1"><img src="../media/q1.jpg"> </div>
+    <div class="h2"><img src="../media/h2.jpg"> </div>
+    <div class="z3"><img src="../media/z3.jpeg"> </div>
+    <div class="y4"><img src="../media/y4.jpeg"> </div>
+    <div class="s5"><img src="../media/s5.jpg"> </div>
+    <div class="x6"><img src="../media/x6.jpeg"> </div>
+</div>
+</body>
+</html>
