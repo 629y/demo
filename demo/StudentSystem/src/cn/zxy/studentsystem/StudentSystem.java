@@ -18,6 +18,7 @@ import java.util.Scanner;
  */
 public class StudentSystem {
     public static void main(String[] args) {
+        ArrayList<Student> list = new ArrayList<>();
         loop:
         while (true) {
             System.out.println("----------欢迎来到学生管理系统-----------");
@@ -30,10 +31,10 @@ public class StudentSystem {
             Scanner sc = new Scanner(System.in);
             String choose = sc.next();
             switch (choose) {
-                case "1" -> addStudent();
-                case "2" -> deleteStudent();
-                case "3" -> updateStudent();
-                case "4" -> queryStudent();
+                case "1" -> addStudent(list);
+                case "2" -> deleteStudent(list);
+                case "3" -> updateStudent(list);
+                case "4" -> queryStudent(list);
                 case "5" -> {
                     System.out.println("退出");
                     //break loop;
